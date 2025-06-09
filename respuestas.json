@@ -1,0 +1,24 @@
+{
+  "saludos": {
+    "patrones": ["hola", "buenos días", "buenas tardes"],
+    "respuestas": [
+      "¡Hola! ¿Cómo estás?",
+      "¡Buenos días! ¿En qué puedo ayudarte?"
+    ]
+  },
+  "despedidas": {
+    "patrones": ["adiós", "hasta luego", "nos vemos"],
+    "respuestas": ["¡Hasta pronto!", "Fue un placer ayudarte"]
+  },
+  "agradecimientos": {
+    "patrones": ["gracias", "te lo agradezco", "muchas gracias"],
+    "respuestas": ["De nada, es un placer ayudar", "¡No hay de qué!"]
+  },
+  "preguntas": {
+    "patrones": ["como estas", "que tal", "como va todo"],
+    "respuestas": [
+      "Estoy aquí para ayudarte, ¿qué necesitas?",
+      "Todo bien, gracias por preguntar. ¿Y tú?"
+    ]
+  }
+}
