@@ -20,5 +20,35 @@
       "Estoy aquí para ayudarte, ¿qué necesitas?",
       "Todo bien, gracias por preguntar. ¿Y tú?"
     ]
+  },
+  "posicion_1": {
+    "patrones": [
+      "primer lugar",
+      "#1",
+      "posicion uno",
+      "posicion 1",
+      "primer puesto"
+    ],
+    "respuestas": [
+      "En primer lugar, tenemos a Alberto Pérez.",
+      "En la posición número uno está María Garcia."
+    ]
+  },
+  "categorias": {
+    "patrones": ["categorias", "tipos de autos", "clases de vehículos"],
+    "respuestas": [
+      "Hypercar es la categoría más avanzada tecnológicamente. LMP2 es conocida por su equilibrio entre velocidad y coste. LMGT3 ofrece una gran variedad de marcas y modelos."
+    ]
+  },
+  "marcas": {
+    "patrones": [
+      "marcas de autos",
+      "fabricantes de vehículos",
+      "compañías automotrices"
+    ],
+    "respuestas": [
+      "Algunas marcas populares son Ferrari, Toyota, Porsche, Cadillac, BMW, Aston Martin, Alpine, Peugeot.",
+      "Las marcas más reconocidas incluyen Ferrari, Toyota, Porsche, Cadillac, BMW, Aston Martin, Alpine, Peugeot."
+    ]
   }
 }
