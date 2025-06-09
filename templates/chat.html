@@ -4,78 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
     <title>Chatbot con Flask</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-
-        .chat-container {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            height: 500px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .chat-messages {
-            flex: 1;
-            overflow-y: auto;
-            margin-bottom: 15px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-
-        .message {
-            margin-bottom: 10px;
-            padding: 8px 12px;
-            border-radius: 15px;
-            max-width: 70%;
-        }
-
-        .user-message {
-            background-color: #dcf8c6;
-            margin-left: auto;
-        }
-
-        .bot-message {
-            background-color: #e0e0e0;
-            margin-right: auto;
-        }
-
-        .input-container {
-            display: flex;
-        }
-
-        #mensaje {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 20px;
-            margin-right: 10px;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
 </head>
 
 <body>
@@ -90,66 +20,7 @@
         </div>
     </div>
 
-    <script>
-        // Función para enviar mensajes
-        async function enviarMensaje() {
-            const input = document.getElementById('mensaje');
-            const mensaje = input.value.trim();
-
-            if (!mensaje) return;
-
-            // Limpiar el input
-            input.value = '';
-
-            // Mostrar el mensaje del usuario
-            mostrarMensaje(mensaje, 'user');
-
-            try {
-                // Enviar el mensaje al servidor
-                const response = await fetch('/chat', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ mensaje })
-                });
-
-                const data = await response.json();
-
-                // Mostrar la respuesta del bot
-                setTimeout(() => {
-                    mostrarMensaje(data.respuesta, 'bot');
-                }, 500); // Pequeño retraso para simular "pensamiento"
-
-            } catch (error) {
-                mostrarMensaje('Lo siento, ocurrió un error al procesar tu mensaje', 'bot');
-                console.error('Error:', error);
-            }
-        }
-
-        // Función para mostrar mensajes en el chat
-        function mostrarMensaje(texto, tipo) {
-            const chatbox = document.getElementById('chatbox');
-            const mensajeDiv = document.createElement('div');
-            mensajeDiv.classList.add('message');
-            mensajeDiv.classList.add(tipo === 'user' ? 'user-message' : 'bot-message');
-            mensajeDiv.textContent = texto;
-            chatbox.appendChild(mensajeDiv);
-
-            // Scroll automático al final
-            chatbox.scrollTop = chatbox.scrollHeight;
-        }
-
-        // Permitir enviar con Enter
-        document.getElementById('mensaje').addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                enviarMensaje();
-            }
-        });
-
-        // Enfocar el input al cargar
-        document.getElementById('mensaje').focus();
-    </script>
+    <script src="../static/js/app.js"></script>
 </body>
 
 </html>
