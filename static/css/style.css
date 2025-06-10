@@ -1,4 +1,6 @@
+/* Variables de la paleta de colores */
 :root {
+  --amarillo-ruf: #f9d236;
   --asfalto-nocturno: #0d0d0d;
   --azul-lemans: #004c99;
   --azul-mulsanne: #002856;
@@ -19,6 +21,12 @@ body {
   background-color: var(--asfalto-nocturno);
 }
 
+h4 {
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+
+/* Contenedor del chat */
 .chat-container {
   background-color: var(--azul-mulsanne);
   border-radius: 10px;
@@ -46,15 +54,45 @@ body {
 .message {
   margin-bottom: 10px;
   padding: 8px 12px;
-  border-radius: 15px;
+  border-radius: 10px;
   max-width: 70%;
+  box-shadow: 3px 2px 5px #0000003f;
+}
+
+/* Caja del chat del usuario */
+.msg-box-user {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 5px;
+
+  & img.user-image {
+    background-color: var(--ferrari-nocturno);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: -3px 2px 5px #0000003f;
+  }
 }
 
 .user-message {
-  /* background-color: var(--purpura-amana); */
   background-color: var(--ferrari-nocturno);
   color: var(--text-color);
+  box-shadow: -3px 2px 5px #0000003f;
   margin-left: auto;
+}
+
+/* Caja del chat del bot */
+.msg-box-bot {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  & img.bot-image {
+    background-color: var(--azul-lemans);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 3px 2px 5px #0000003f;
+  }
 }
 
 .bot-message {
@@ -63,6 +101,7 @@ body {
   margin-right: auto;
 }
 
+/* Entrada para el mensaje */
 .input-container {
   display: flex;
 }
@@ -88,5 +127,22 @@ button {
 
   &:hover {
     background-color: var(--verde-sarthe);
+  }
+}
+
+/* Atajos */
+.buttons-container {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+
+  & button {
+    background-color: var(--ferrari-nocturno);
+    padding: 5px 10px;
+    border-radius: 10px;
+
+    &:hover {
+      color: var(--amarillo-ruf);
+    }
   }
 }

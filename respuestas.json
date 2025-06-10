@@ -3,7 +3,7 @@
     "patrones": ["hola", "buenos días", "buenas tardes"],
     "respuestas": [
       "¡Hola! ¿Cómo estás?",
-      "¡Buenos días! ¿En qué puedo ayudarte?"
+      "¡Buen día! ¿qué desea saber sobre la carrera?"
     ]
   },
   "despedidas": {
@@ -42,6 +42,7 @@
   },
   "marcas": {
     "patrones": [
+      "marcas",
       "marcas de autos",
       "fabricantes de vehículos",
       "compañías automotrices"

@@ -12,11 +12,21 @@
     <div class="chat-container">
         <h1><span class="titulo_h1">24LeMans</span>bot</h1>
         <div class="chat-messages" id="chatbox">
-            <div class="message bot-message">¡Hola! Soy 24LeMansbot. ¿Qué deseas saber sobre la carrera?</div>
+            <div class="msg-box-bot">
+                <img src="../static/assets/robot.svg" alt="image" width="32" class="image bot-image">
+                <div class="message bot-message">¡Hola! Soy 24LeMansbot. ¿Qué deseas saber sobre la carrera?</div>
+            </div>
         </div>
         <div class="input-container">
             <input type="text" id="mensaje" placeholder="Escribe tu mensaje..." autocomplete="off">
             <button onclick="enviarMensaje()">Enviar</button>
+        </div>
+        <h4>Atajos:</h4>
+        <div class="buttons-container">
+            <button class="btn-shortcut" data-message="categorias">#Categorias</button>
+            <button class="btn-shortcut" data-message="primer lugar">#Primer lugar</button>
+            <button class="btn-shortcut" data-message="marcas">#Marcas</button>
+            <button class="btn-shortcut" data-message="nos vemos">#Nos vemos</button>
         </div>
     </div>
 
