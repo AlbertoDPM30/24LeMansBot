@@ -3,7 +3,7 @@
     "patrones": ["hola", "buenos días", "buenas tardes"],
     "respuestas": [
       "¡Hola! ¿Cómo estás?",
-      "¡Buen día! ¿qué desea saber sobre la carrera?"
+      "¡Buenos días! ¿En qué puedo ayudarte?"
     ]
   },
   "despedidas": {
@@ -35,21 +35,223 @@
     ]
   },
   "categorias": {
-    "patrones": ["categorias", "tipos de autos", "clases de vehículos"],
+    "patrones": [
+      "categorias",
+      "tipos de autos",
+      "clases de vehículos",
+      "categorías de le mans"
+    ],
+    "respuestas": []
+  },
+  "categoria_hypercar": {
+    "patrones": ["hypercar", "hipercar", "clase hypercar"],
     "respuestas": [
-      "Hypercar es la categoría más avanzada tecnológicamente. LMP2 es conocida por su equilibrio entre velocidad y coste. LMGT3 ofrece una gran variedad de marcas y modelos."
+      "La categoría **Hypercar** es la cima del automovilismo de resistencia en Le Mans. Incluye a los 'Le Mans Hypercar' (LMH) y 'Le Mans Daytona h' (LMDh). Estos prototipos son los más rápidos y avanzados, y buscan la victoria general. Marcas como Toyota, Ferrari, Porsche, Cadillac, Peugeot y Alpine compiten aquí. ¿Hay algo más que quieras saber sobre Hypercar?"
+    ]
+  },
+  "categoria_lmp2": {
+    "patrones": ["lmp2", "clase lmp2"],
+    "respuestas": [
+      "La categoría **LMP2** (Le Mans Prototype 2) es un escalón debajo de los Hypercars. Son prototipos con chasis y motores estandarizados para controlar costos y asegurar una competencia reñida. Son increíblemente rápidos y a menudo están pilotados por equipos privados con pilotos profesionales y amateurs. ¿Tienes alguna pregunta específica sobre LMP2?"
+    ]
+  },
+  "categoria_lmgt3": {
+    "patrones": ["lmgt3", "gt3", "clase gt3", "clase lmgt3"],
+    "respuestas": [
+      "La categoría **LMGT3** (Le Mans Grand Touring 3) presenta coches derivados de la producción en serie, lo que significa que puedes ver versiones de competición de tus deportivos favoritos. Aquí compiten una gran variedad de marcas como Ferrari, Porsche, Aston Martin, Corvette, Lamborghini, Ford y BMW. Ofrece carreras muy emocionantes debido a la diversidad de vehículos y la cercanía de la competencia. ¿Te gustaría saber más sobre algún coche o marca en LMGT3?"
     ]
   },
   "marcas": {
     "patrones": [
-      "marcas",
       "marcas de autos",
       "fabricantes de vehículos",
       "compañías automotrices"
     ],
     "respuestas": [
-      "Algunas marcas populares son Ferrari, Toyota, Porsche, Cadillac, BMW, Aston Martin, Alpine, Peugeot.",
-      "Las marcas más reconocidas incluyen Ferrari, Toyota, Porsche, Cadillac, BMW, Aston Martin, Alpine, Peugeot."
+      "Algunas marcas populares en las 24 Horas de Le Mans son Ferrari, Toyota, Porsche, Cadillac, BMW, Aston Martin, Alpine, Peugeot, Corvette, Lamborghini, Ford. Cada una compite en diferentes categorías. Escriba la palabra *marca* seguida del nombre de una marca para saber más sobre su participación en Le Mans.",
+      "Las marcas más reconocidas en Le Mans incluyen Ferrari, Toyota, Porsche, Cadillac, BMW, Aston Martin, Alpine, Peugeot, Corvette, Lamborghini, Ford. Escriba la palabra *marca* seguida del nombre de una marca para saber más sobre su participación en Le Mans."
+    ]
+  },
+  "marca_ferrari": {
+    "patrones": ["marca ferrari", "coches ferrari"],
+    "respuestas": [
+      "**Ferrari** es un nombre legendario en Le Mans. Para 2025, se espera que compita fuertemente en **Hypercar** con su 499P, buscando defender su título. También tendrá presencia en **LMGT3** con el 296 GT3. ¡Siempre son contendientes!"
+    ]
+  },
+  "marca_toyota": {
+    "patrones": ["marca toyota", "coches toyota"],
+    "respuestas": [
+      "**Toyota** ha sido un pilar en Le Mans en la era moderna. En 2025, su presencia se centrará en la categoría **Hypercar** con el GR010 Hybrid, buscando retomar la corona. Son conocidos por su fiabilidad y rendimiento."
+    ]
+  },
+  "marca_porsche": {
+    "patrones": ["marca porsche", "coches porsche"],
+    "respuestas": [
+      "**Porsche** es el fabricante más exitoso en la historia de Le Mans. Para 2025, se espera que luche por la victoria general en **Hypercar** con su 963 LMDh. Además, su icónico 911 GT3 R lo verá competir ferozmente en la categoría **LMGT3**."
+    ]
+  },
+  "marca_cadillac": {
+    "patrones": ["marca cadillac", "coches cadillac"],
+    "respuestas": [
+      "**Cadillac** ha mostrado un gran desempeño en Le Mans recientemente. En 2025, su enfoque principal será la categoría **Hypercar** con el V-Series.R LMDh, buscando su primera victoria absoluta en la mítica carrera."
+    ]
+  },
+  "marca_bmw": {
+    "patrones": ["marca bmw", "coches bmw"],
+    "respuestas": [
+      "**BMW** regresa con fuerza a Le Mans. Para 2025, competirá en la categoría **Hypercar** con el M Hybrid V8 LMDh. También tendrás su fuerte presencia en **LMGT3** con el M4 GT3, prometiendo emoción en ambas categorías."
+    ]
+  },
+  "marca_aston_martin": {
+    "patrones": ["marca aston martin", "coches aston martin"],
+    "respuestas": [
+      "**Aston Martin** es un competidor tradicional en Le Mans. Para 2025, se espera que su Valkyrie AMR-LMH haga su debut en la categoría **Hypercar**. Además, su Vantage AMR GT3 seguirá siendo un contendiente en **LMGT3**."
+    ]
+  },
+  "marca_alpine": {
+    "patrones": ["marca alpine", "coches alpine"],
+    "respuestas": [
+      "**Alpine**, con su fuerte herencia en resistencia, competirá en **Hypercar** para 2025 con el A424 LMDh, buscando consolidarse entre los grandes. Podrían también tener presencia en **LMP2** dependiendo de la normativa y equipos cliente."
+    ]
+  },
+  "marca_peugeot": {
+    "patrones": ["marca peugeot", "coches peugeot"],
+    "respuestas": [
+      "**Peugeot** busca revivir sus glorias pasadas en Le Mans. En 2025, su principal apuesta estará en la categoría **Hypercar** con el 9X8, con la esperanza de ser un fuerte contendiente por la victoria general."
+    ]
+  },
+  "marca_corvette": {
+    "patrones": ["marca corvette", "coches corvette"],
+    "respuestas": [
+      "**Corvette** es un favorito de los fans en Le Mans. Para 2025, su presencia se centrará en la categoría **LMGT3** con el Corvette Z06 GT3.R, conocido por su velocidad y fiabilidad en carreras de resistencia."
+    ]
+  },
+  "marca_lamborghini": {
+    "patrones": ["marca lamborghini", "coches lamborghini"],
+    "respuestas": [
+      "**Lamborghini** ha entrado recientemente en el WEC y Le Mans. Para 2025, se espera que su SC63 LMDh compita en la categoría **Hypercar**. También tienen una fuerte presencia en **LMGT3** con el Huracán GT3 EVO2."
+    ]
+  },
+  "marca_ford": {
+    "patrones": ["marca ford", "coches ford"],
+    "respuestas": [
+      "**Ford** tiene una rica historia en Le Mans, incluyendo su icónico GT40. Para 2025, se espera que compita en la categoría **LMGT3** con el Mustang GT3, buscando añadir un nuevo capítulo a su legado en la carrera."
+    ]
+  },
+  "equipos": {
+    "patrones": [
+      "equipos",
+      "equipos de le mans",
+      "quienes compiten",
+      "lista de equipos"
+    ],
+    "respuestas": [
+      "¡Claro! En las 24 Horas de Le Mans de 2025, encontrarás equipos de fábrica y privados compitiendo en diversas categorías. En Hypercar, tienes a Toyota Gazoo Racing, Ferrari AF Corse, Porsche Penske Motorsport, Cadillac Hertz Team Jota, BMW M Team WRT, Aston Martin THOR Team, Alpine Endurance Team, y Peugeot TotalEnergies. También hay muchos equipos en LMP2 y LMGT3. ¿Te gustaría saber sobre un equipo en particular?. Escribe la palabra *equipo* seguida del nombre del equipo para saber más sobre su participación en Le Mans."
+    ]
+  },
+  "equipo_toyota_gazoo_racing": {
+    "patrones": ["toyota gazoo racing", "equipo toyota", "toyota hypercar"],
+    "respuestas": [
+      "**Toyota Gazoo Racing** es un gigante en Hypercar. Para 2025, se espera que sigan con dos GR010 Hybrid. El coche #7 lo pilotarán Mike Conway, Kamui Kobayashi y Nyck de Vries, mientras que el #8 tendrá a Sébastien Buemi, Brendon Hartley y Ryō Hirakawa. ¡Son grandes favoritos a la victoria!"
+    ]
+  },
+  "equipo_ferrari_af_corse": {
+    "patrones": ["ferrari af corse", "equipo ferrari", "ferrari hypercar"],
+    "respuestas": [
+      "**Ferrari AF Corse** defenderá su título en Hypercar con sus 499P. El coche #50 contará con Antonio Fuoco, Miguel Molina y Nicklas Nielsen. El coche #51 tendrá a Alessandro Pier Guidi, James Calado y Antonio Giovinazzi. ¡Son los actuales campeones y siempre dan batalla!"
+    ]
+  },
+  "equipo_porsche_penske_motorsport": {
+    "patrones": [
+      "porsche penske motorsport",
+      "equipo porsche",
+      "porsche hypercar"
+    ],
+    "respuestas": [
+      "**Porsche Penske Motorsport** busca la victoria absoluta en Hypercar con su 963. El coche #5 tendrá a Michael Christensen, Julien Andlauer y Mathieu Jaminet. El coche #6 será pilotado por Kévin Estre, Laurens Vanthoor y Matt Campbell. Además, habrá otros Porsche 963 de equipos cliente como Jota y Proton Competition."
+    ]
+  },
+  "equipo_cadillac_hertz_team_jota": {
+    "patrones": [
+      "cadillac hertz team jota",
+      "equipo cadillac",
+      "cadillac hypercar"
+    ],
+    "respuestas": [
+      "**Cadillac Hertz Team Jota** es un equipo fuerte en Hypercar. Para 2025, se espera que compitan con dos Cadillac V-Series.R. El coche #12 con Will Stevens, Norman Nato y Alex Lynn. El coche #38 con Earl Bamber, Sébastien Bourdais y Jenson Button. También se esperan otros Cadillac cliente como los de Action Express Racing y Wayne Taylor Racing."
+    ]
+  },
+  "equipo_bmw_m_team_wrt": {
+    "patrones": ["bmw m team wrt", "equipo bmw", "bmw hypercar"],
+    "respuestas": [
+      "**BMW M Team WRT** compite en Hypercar con el M Hybrid V8. El coche #15 tendrá a Dries Vanthoor, Raffaele Marciello y Kevin Magnussen. El coche #20 será pilotado por René Rast, Robin Frijns y Sheldon van der Linde. Son una fuerza a tener en cuenta."
+    ]
+  },
+  "equipo_aston_martin_thor_team": {
+    "patrones": [
+      "aston martin thor team",
+      "equipo aston martin",
+      "aston martin hypercar"
+    ],
+    "respuestas": [
+      "**Aston Martin THOR Team** hará su debut en Hypercar en 2025 con el Valkyrie AMR-LMH. El coche #007 contará con Harry Tincknell, Ross Gunn y Tom Gamble. El coche #009 será pilotado por Alex Riberas, Marco Sørensen y Roman De Angelis. ¡Será interesante ver su rendimiento!"
+    ]
+  },
+  "equipo_alpine_endurance_team": {
+    "patrones": ["alpine endurance team", "equipo alpine", "alpine hypercar"],
+    "respuestas": [
+      "**Alpine Endurance Team** compite en Hypercar con su A424 LMDh. El coche #36 tendrá a Mick Schumacher, Frédéric Makowiecki y Jules Gounon. El coche #35 tendrá a Charles Milesi, Ferdinand Habsburg y Paul-Loup Chatin. ¡Son un equipo en ascenso!"
+    ]
+  },
+  "equipo_peugeot_totalenergies": {
+    "patrones": ["peugeot totalenergies", "equipo peugeot", "peugeot hypercar"],
+    "respuestas": [
+      "**Peugeot TotalEnergies** busca el éxito en Hypercar con su 9X8. El coche #93 contará con Paul Di Resta, Mikkel Jensen y Jean-Éric Vergne. El coche #94 será pilotado por Loïc Duval, Malthe Jakobsen y Stoffel Vandoorne. Han estado trabajando duro en el desarrollo de su coche."
+    ]
+  },
+  "equipo_united_autosports": {
+    "patrones": [
+      "united autosports",
+      "equipo united autosports",
+      "united autosports lmp2",
+      "united autosports gt3"
+    ],
+    "respuestas": [
+      "**United Autosports** es un equipo muy activo y exitoso en Le Mans. Compiten en **LMP2** con su Oreca 07-Gibson, y también tienen una fuerte presencia en **LMGT3** con el McLaren 720S GT3 Evo. Sus alineaciones varían, pero siempre cuentan con pilotos talentosos. Por ejemplo, en LMGT3, se espera que tengan a Sean Gelael y Darren Leung en uno de sus McLaren."
+    ]
+  },
+  "equipo_proton_competition": {
+    "patrones": [
+      "proton competition",
+      "equipo proton",
+      "proton porsche",
+      "proton ford"
+    ],
+    "respuestas": [
+      "**Proton Competition** es un equipo privado que compite en varias categorías. En 2025, se espera que sigan con un **Porsche 963** en Hypercar. También son uno de los equipos principales que operan el **Ford Mustang GT3** en la categoría **LMGT3**, con pilotos como Ryan Hardwick, Zacharie Robichon y Benjamin Barker en el #77, y Giorgio Roda, Mikkel Pedersen y Dennis Olsen en el #88. Son un equipo con mucha experiencia."
+    ]
+  },
+  "equipo_tf_sport": {
+    "patrones": ["tf sport", "equipo tf sport", "tf sport corvette"],
+    "respuestas": [
+      "**TF Sport** es un equipo prominente en la categoría **LMGT3**. Para 2025, son los encargados de operar el **Chevrolet Corvette Z06 GT3.R**. Se espera que pilotos como Daniel Juncadella, Ben Keating y Jonny Edgar compitan con el coche #33."
+    ]
+  },
+  "pole_position": {
+    "patrones": [
+      "pole position",
+      "pole",
+      "vuelta rapida",
+      "tiempo de clasificación",
+      "quien hizo la pole",
+      "quien sale primero"
+    ],
+    "respuestas": [
+      "¡La pole position para las 24 Horas de Le Mans de 2025 fue para **Kamui Kobayashi** (Japón) en el **Toyota GR010 Hybrid #7** de la categoría Hypercar, con un impresionante tiempo de 3:24.567. ¡Una vuelta magistral!",
+      "En una sesión de clasificación reñida, **Antonio Fuoco** (Italia) al volante del **Ferrari 499P #50** de Hypercar consiguió la pole con un tiempo de 3:25.123. ¡Ferrari busca la victoria!",
+      "La pole en la categoría Hypercar fue para **Kévin Estre** (Francia) con el **Porsche 963 #6**. Su tiempo fue de 3:25.345, demostrando el poder del equipo Porsche Penske Motorsport en su casa.",
+      "**Alex Lynn** (Reino Unido) llevó al **Cadillac V-Series.R #2** a la pole position en Hypercar, marcando un tiempo de 3:25.789. ¡Una gran sorpresa y un excelente rendimiento para Cadillac!",
+      "En la categoría LMP2, la pole fue para **Louis Delétraz** (Suiza) con el **Oreca 07-Gibson #14** del equipo AO by TF, con un tiempo de 3:34.123. En LMGT3, el **Porsche 911 GT3 R #92** de Manthey EMA, pilotado por **Richard Lietz** (Austria), logró la pole con 3:57.890."
     ]
   }
 }

@@ -7,18 +7,27 @@
   --bronze-quemado: #8b4000;
   --ferrari-nocturno: #5a0000;
   --gris-dunlop: #333333;
-  --oro-vintage: #4c4c00;
+  --oro-vintage: #d4af37;
   --purpura-amana: #1e0030;
   --text-color: #e0e0e0;
-  --verde-sarthe: #1c2e14;
+  --verde-sarthe: #00a651;
+}
+
+::selection {
+  background-color: var(--amarillo-ruf);
+  color: #000;
 }
 
 body {
   font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  width: 100%;
+  height: 100dvh;
+  margin: 0;
   background-color: var(--asfalto-nocturno);
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h4 {
@@ -32,7 +41,9 @@ h4 {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  height: 500px;
+  /* height: 500px; */
+  height: 85dvh;
+  width: 80%;
   display: flex;
   flex-direction: column;
 }
@@ -42,7 +53,7 @@ h4 {
   overflow-y: auto;
   margin-bottom: 15px;
   padding: 10px;
-  border: 1px solid var(--bronze-quemado);
+  border: 2px solid var(--bronze-quemado);
   border-radius: 5px;
   background-color: var(--gris-dunlop);
 }
@@ -57,6 +68,7 @@ h4 {
   border-radius: 10px;
   max-width: 70%;
   box-shadow: 3px 2px 5px #0000003f;
+  line-height: 1.2lh;
 }
 
 /* Caja del chat del usuario */
@@ -110,20 +122,27 @@ h4 {
   flex: 1;
   padding: 10px;
   outline: none;
-  border: 1px solid var(--purpura-amana);
+  border: 2px solid var(--purpura-amana);
   background-color: var(--gris-dunlop);
   color: var(--text-color);
-  border-radius: 20px;
-  margin-right: 10px;
+  border-radius: 15px;
+  margin-right: 5px;
 }
 
 button {
-  padding: 10px 20px;
   background-color: var(--oro-vintage);
   color: var(--text-color);
   border: none;
-  border-radius: 20px;
   cursor: pointer;
+  padding: 10px;
+  transition: all 0.5s ease;
+
+  &.btn-send {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
 
   &:hover {
     background-color: var(--verde-sarthe);
@@ -138,8 +157,10 @@ button {
 
   & button {
     background-color: var(--ferrari-nocturno);
+    color: var(--text-color);
     padding: 5px 10px;
     border-radius: 10px;
+    transition: all 0.5s ease;
 
     &:hover {
       color: var(--amarillo-ruf);

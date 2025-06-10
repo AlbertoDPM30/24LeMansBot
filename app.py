@@ -9,16 +9,43 @@ app = Flask(__name__)
 with open('respuestas.json', 'r', encoding='utf-8') as f:
     respuestas_data = json.load(f)
 
+# Variable para mantener el estado de la conversación
+last_bot_message = ""
+
 
 def encontrar_respuesta(mensaje):
+    global last_bot_message
     mensaje = mensaje.lower().strip()
 
+    # Comprobar si el mensaje actual es una categoría y si la pregunta anterior fue sobre categorías
+    if "las categorias son:" in last_bot_message.lower():
+        for categoria_key, datos in respuestas_data.items():
+            if categoria_key.startswith("categoria_") and mensaje in datos['patrones']:
+                last_bot_message = random.choice(datos['respuestas'])
+                return last_bot_message
+
+    # Búsqueda general de patrones
     for categoria, datos in respuestas_data.items():
         for patron in datos['patrones']:
             if re.search(rf'\b{patron}\b', mensaje, re.IGNORECASE):
-                return random.choice(datos['respuestas'])
+                # Manejo especial para la categoría "categorias"
+                if categoria == "categorias":
+                    category_names = []
+                    for cat_key in respuestas_data.keys():
+                        if cat_key.startswith("categoria_"):
+                            # Asumiendo que el primer patrón es el nombre de la categoría
+                            category_names.append(
+                                respuestas_data[cat_key]['patrones'][0].capitalize())
 
-    return "No estoy seguro de cómo responder a eso. ¿Puedes reformular tu pregunta?"
+                    response_text = f"¡Claro! Las categorías principales de las 24 Horas de Le Mans son: {', '.join(category_names)}. ¿Te gustaría saber más sobre alguna de ellas? ¡Solo escribe su nombre!"
+                    last_bot_message = response_text
+                    return response_text
+                else:
+                    last_bot_message = random.choice(datos['respuestas'])
+                    return last_bot_message
+
+    last_bot_message = "No estoy seguro de cómo responder a eso. ¿Puedes reformular tu pregunta?"
+    return last_bot_message
 
 # Ruta principal para la interfaz gráfica
 
