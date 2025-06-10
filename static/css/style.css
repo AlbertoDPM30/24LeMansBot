@@ -30,6 +30,10 @@ body {
   justify-content: center;
 }
 
+h1 {
+  color: var(--azul-mulsanne);
+}
+
 h4 {
   color: var(--text-color);
   margin-bottom: 0;
@@ -37,13 +41,9 @@ h4 {
 
 /* Contenedor del chat */
 .chat-container {
-  background-color: var(--azul-mulsanne);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  /* height: 500px; */
-  height: 85dvh;
-  width: 80%;
+  padding: 0 15px;
+  height: 95dvh;
+  width: 90%;
   display: flex;
   flex-direction: column;
 }
@@ -51,14 +51,13 @@ h4 {
 .chat-messages {
   flex: 1;
   overflow-y: auto;
-  margin-bottom: 15px;
   padding: 10px;
-  border: 2px solid var(--bronze-quemado);
-  border-radius: 5px;
+  border: 2px solid var(--azul-mulsanne);
+  border-radius: 15px;
   background-color: var(--gris-dunlop);
 }
 
-.titulo_h1 {
+.title-chat {
   color: var(--bronze-quemado);
 }
 
@@ -81,6 +80,7 @@ h4 {
   & img.user-image {
     background-color: var(--ferrari-nocturno);
     padding: 10px;
+    margin-bottom: 10px;
     border-radius: 50%;
     box-shadow: -3px 2px 5px #0000003f;
   }
@@ -102,6 +102,7 @@ h4 {
   & img.bot-image {
     background-color: var(--azul-lemans);
     padding: 10px;
+    margin-bottom: 10px;
     border-radius: 50%;
     box-shadow: 3px 2px 5px #0000003f;
   }
@@ -122,15 +123,15 @@ h4 {
   flex: 1;
   padding: 10px;
   outline: none;
-  border: 2px solid var(--purpura-amana);
+  border: 2px solid var(--ferrari-nocturno);
   background-color: var(--gris-dunlop);
   color: var(--text-color);
-  border-radius: 15px;
+  border-radius: 25px;
   margin-right: 5px;
 }
 
 button {
-  background-color: var(--oro-vintage);
+  background-color: var(--ferrari-nocturno);
   color: var(--text-color);
   border: none;
   cursor: pointer;
@@ -145,7 +146,13 @@ button {
   }
 
   &:hover {
-    background-color: var(--verde-sarthe);
+    background-color: var(--azul-lemans);
+
+    & img {
+      filter: brightness(0) invert(1);
+      transform: perspective(1000px) rotateX(360deg);
+      transition: all 0.8s ease;
+    }
   }
 }
 
@@ -153,14 +160,17 @@ button {
 .buttons-container {
   display: flex;
   gap: 5px;
-  margin-top: 10px;
+  flex-wrap: nowrap;
+  padding: 10px 0;
+  overflow-x: auto;
 
   & button {
     background-color: var(--ferrari-nocturno);
     color: var(--text-color);
     padding: 5px 10px;
     border-radius: 10px;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
+    text-wrap: nowrap;
 
     &:hover {
       color: var(--amarillo-ruf);

@@ -28,23 +28,25 @@ def encontrar_respuesta(mensaje):
     for categoria, datos in respuestas_data.items():
         for patron in datos['patrones']:
             if re.search(rf'\b{patron}\b', mensaje, re.IGNORECASE):
+
                 # Manejo especial para la categoría "categorias"
                 if categoria == "categorias":
                     category_names = []
                     for cat_key in respuestas_data.keys():
                         if cat_key.startswith("categoria_"):
-                            # Asumiendo que el primer patrón es el nombre de la categoría
+
+                            # Se asume el primer patrón como el nombre de la categoría
                             category_names.append(
                                 respuestas_data[cat_key]['patrones'][0].capitalize())
 
-                    response_text = f"¡Claro! Las categorías principales de las 24 Horas de Le Mans son: {', '.join(category_names)}. ¿Te gustaría saber más sobre alguna de ellas? ¡Solo escribe su nombre!"
+                    response_text = f"¡Claro! Las categorías principales de las 24 Horas de Le Mans son: '{', '.join(category_names)}'. ¿Te gustaría saber más sobre una categoría en especifico?... ¡Escriba la palabra *categoria* seguida de su nombre!"
                     last_bot_message = response_text
                     return response_text
                 else:
                     last_bot_message = random.choice(datos['respuestas'])
                     return last_bot_message
 
-    last_bot_message = "No estoy seguro de cómo responder a eso. ¿Puedes reformular tu pregunta?"
+    last_bot_message = "No estoy seguro de cómo responder a eso. ¿Puedes reformular tu pregunta?. Sí necestas ayuda adicional, usa los atajos en la parte inferior."
     return last_bot_message
 
 # Ruta principal para la interfaz gráfica
