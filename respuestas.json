@@ -159,7 +159,11 @@
     ]
   },
   "auto_aston_martin_valkyrie_amr_lmh": {
-    "patrones": ["aston martin valkyrie amr-lmh", "valkyrie amr-lmh"],
+    "patrones": [
+      "aston martin valkyrie amr-lmh",
+      "valkyrie amr-lmh",
+      "aston martin valkyrie"
+    ],
     "respuestas": [
       "El 'Aston Martin Valkyrie' AMR-LMH hará su debut en la categoría Hypercar en 2025, con al menos dos unidades del equipo Heart of Racing (o THOR Team).  - Auto #007: Se espera que lo conduzcan Alex Riberas, Daniel Mancinelli y Ian James.  - Auto #009: Conducido por Ross Gunn, Darren Turner y Tom Gamble.    Este Hypercar cuenta con un motor V12 de 6.5 litros de aspiración natural desarrollado por Cosworth, complementado con un sistema híbrido, diseñado para alcanzar la potencia máxima permitida en la categoría."
     ]
@@ -354,11 +358,10 @@
       "primer puesto"
     ],
     "respuestas": [
-      "¡La pole position para las 24 Horas de Le Mans de 2025 fue para Kamui Kobayashi (Japón) en el 'Toyota GR010 Hybrid' #7 de la categoría Hypercar, con un impresionante tiempo de 3:24.567. ¡Una vuelta magistral!",
-      "En una sesión de clasificación reñida, Antonio Fuoco (Italia) al volante del 'Ferrari 499P' #50 de Hypercar consiguió la pole con un tiempo de 3:25.123. ¡Ferrari busca la victoria!",
-      "La pole en la categoría Hypercar fue para Kévin Estre (Francia) con el 'Porsche 963' #6. Su tiempo fue de 3:25.345, demostrando el poder del equipo Porsche Penske Motorsport en su casa.",
-      "Alex Lynn (Reino Unido) llevó al 'Cadillac V-Series.R' #2 a la pole position en Hypercar, marcando un tiempo de 3:25.789. ¡Una gran sorpresa y un excelente rendimiento para Cadillac!",
-      "En la categoría LMP2, la pole fue para Louis Delétraz (Suiza) con el Oreca 07-Gibson #14 del equipo AO by TF, con un tiempo de 3:34.123. En LMGT3, el 'Porsche 911 GT3 R' #92 de Manthey EMA, pilotado por Richard Lietz (Austria), logró la pole con 3:57.890."
+      "Alex Lynn (Reino Unido) marcó el mejor tiempo en la sesión de clasificación de las 24 Horas de Le Mans 2025, con su Cadillac marcando un crono de 3m22.847s que fue cuatro centésimas más rápido que el BMW de Dries Vanthoor (Belgica).",
+      "¡La pole position para las 24 Horas de Le Mans 2025 la logró Alex Lynn (Reino Unido) con su 'Cadillac V-Series.R'! Marcó un tiempo impresionante de 3:22.847, superando al 'BMW M Hybrid V8' de Dries Vanthoor (Belgica) por solo cuatro centésimas. ¡Una clasificación emocionante!",
+      "¡Increíble! Alex Lynn (Reino Unido) ha conseguido la pole position para las 24 Horas de Le Mans 2025 con un tiempo de 3:22.847 en su 'Cadillac V-Series.R'. ¡Una gran actuación!",
+      "Alex Lynn (Reino Unido) llevó al 'Cadillac V-Series.R' #2 a la pole position en Hypercar, marcando un tiempo de 3:22.847. ¡Una gran sorpresa y un excelente rendimiento para Cadillac!"
     ]
   },
   "autos_lexus": {
