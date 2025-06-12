@@ -14,6 +14,16 @@
     "patrones": ["gracias", "te lo agradezco", "muchas gracias"],
     "respuestas": ["De nada, es un placer ayudar", "¡No hay de qué!"]
   },
+  "que_es": {
+    "patrones": [
+      "que es las 24 horas de le mans",
+      "24 horas de le mans",
+      "que es le mans"
+    ],
+    "respuestas": [
+      "Las 24 Horas de Le Mans es una de las carreras de resistencia más prestigiosas del mundo, celebrada anualmente en el Circuito de la Sarthe, Francia. Los equipos compiten durante 24 horas continuas, buscando cubrir la mayor distancia posible. Es famosa por su historia rica, innovación tecnológica y la participación de marcas icónicas como 'Ferrari', 'Porsche' y 'Toyota'."
+    ]
+  },
   "preguntas": {
     "patrones": ["quien eres", "como te llamas", "que haces"],
     "respuestas": [
